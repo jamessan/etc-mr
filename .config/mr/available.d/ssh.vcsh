@@ -1,0 +1,4 @@
+[$HOME/.config/vcsh/repo.d/ssh.git]
+checkout = vcsh clone ssh://git.jamessan.com:1871/git/etc/ssh.git ssh
+post_checkout = make -C $HOME/.ssh
+order = 1

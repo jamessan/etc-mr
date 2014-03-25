@@ -1,0 +1,2 @@
+[$HOME/.config/vcsh/repo.d/zsh.git]
+checkout = vcsh clone ssh://git.jamessan.com/git/etc/zsh.git zsh

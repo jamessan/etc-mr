@@ -1,0 +1,2 @@
+[$HOME/.config/vcsh/repo.d/offlineimap.git]
+checkout = vcsh clone ssh://git.jamessan.com/git/etc/offlineimap.git offlineimap

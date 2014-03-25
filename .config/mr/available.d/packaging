@@ -1,0 +1,30 @@
+[$HOME/src/debian.org/devscripts]
+checkout = git clone ssh://git.debian.org/git/collab-maint/devscripts.git
+post_checkout = cd devscripts && git config user.email jamessan@debian.org
+
+[$HOME/src/debian.org/vim]
+checkout = hg clone ssh://hg.debian.org//hg/pkg-vim/vim
+post_checkout = printf "[ui]\nusername = James McCoy <jamessan@debian.org>\n" >> vim/.hg/hgrc
+
+[$HOME/src/debian.org/subversion]
+checkout = svn co --depth=empty svn+ssh://svn.debian.org/svn/pkg-subversion/src subversion
+post_checkout = svn up --depth=infinity subversion/1.8.x
+post_checkout = svn up --depth=infinity subversion/wheezy
+
+[$HOME/src/debian.org/libvterm/experimental]
+pre_checkout = bzr init-repo . 2>/dev/null || true
+checkout = bzr branch bzr+ssh://bzr.debian.org/bzr/collab-maint/libvterm/experimental
+post_checkout = bzr config email="James McCoy <jamessan@debian.org>"
+
+[$HOME/src/debian.org/pangoterm/experimental]
+pre_checkout = bzr init-repo . 2>/dev/null || true
+checkout = bzr branch bzr+ssh://bzr.debian.org/bzr/collab-maint/pangoterm/experimental
+post_checkout = bzr config email="James McCoy <jamessan@debian.org>"
+
+[$HOME/src/debian.org/vim-addon-manager]
+checkout = git clone ssh://git.debian.org/git/pkg-vim/vim-addon-manager.git
+post_checkout = cd devscripts && git config user.email jamessan@debian.org
+
+[$HOME/src/debian.org/vim-scripts]
+checkout = git clone ssh://git.debian.org/git/pkg-vim/vim-scripts.git
+post_checkout = cd devscripts && git config user.email jamessan@debian.org
