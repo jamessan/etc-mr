@@ -4,7 +4,7 @@ post_checkout = cd devscripts && git config user.email jamessan@debian.org
 
 [$HOME/src/debian.org/vim]
 checkout = hg clone ssh://hg.debian.org//hg/pkg-vim/vim
-post_checkout = printf "[ui]\nusername = James McCoy <jamessan@debian.org>\n" >> vim/.hg/hgrc
+post_checkout = printf "upstream = https://vim.googlecode.com/hg\n\n[ui]\nusername = James McCoy <jamessan@debian.org>\n" >> vim/.hg/hgrc
 
 [$HOME/src/debian.org/subversion]
 checkout = svn co --depth=empty svn+ssh://svn.debian.org/svn/pkg-subversion/src subversion
