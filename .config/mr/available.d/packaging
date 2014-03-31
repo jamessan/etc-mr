@@ -9,7 +9,7 @@ post_checkout = printf "upstream = https://vim.googlecode.com/hg\n\n[ui]\nuserna
 [$HOME/src/debian.org/subversion]
 checkout = svn co --depth=empty svn+ssh://svn.debian.org/svn/pkg-subversion/src subversion
 post_checkout = svn up --depth=infinity subversion/1.8.x
-post_checkout = svn up --depth=infinity subversion/wheezy
+post_checkout_append = svn up --depth=infinity subversion/wheezy
 
 [$HOME/src/debian.org/libvterm/experimental]
 pre_checkout = bzr init-repo . 2>/dev/null || true
