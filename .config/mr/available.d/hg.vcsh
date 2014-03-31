@@ -1,2 +1,2 @@
 [$HOME/.config/vcsh/repo.d/hg.git]
-checkout = vcsh clone ssh://git.jamessan.com/git/etc/hg.git hg
+checkout = vcsh clone http://git.jamessan.com/git/etc/hg.git hg
