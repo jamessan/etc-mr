@@ -1,6 +1,6 @@
 [$HOME/.config/vcsh/repo.d/vim.git]
 checkout = vcsh clone ssh://git.jamessan.com/git/etc/vim.git vim
-post_checkout_append = mkdir $HOME/.vim/tmp $HOME/.vim/backup
+post_checkout = mkdir $HOME/.vim/tmp $HOME/.vim/backup
 post_checkout_append = vcsh vim remote add nerdtree https://github.com/scrooloose/nerdtree.git
 post_checkout_append = vcsh vim remote add repeat https://github.com/tpope/vim-repeat.git
 post_checkout_append = vcsh vim remote add scriptease https://github.com/tpope/vim-scriptease.git
