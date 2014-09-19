@@ -10,3 +10,7 @@ post_checkout_append = vcsh vim remote add SkyBison https://github.com/paradigm/
 post_checkout_append = vcsh vim remote add sleuth https://github.com/tpope/vim-sleuth.git
 post_checkout_append = vcsh vim remote add surround https://github.com/tpope/vim-surround.git
 post_checkout_append = vcsh vim remote add tabular https://github.com/godlygeek/tabular.git
+post_checkout_append = vcsh vim remote add janah https://github.com/mhinz/vim-janah.git
+post_checkout_append = vcsh vim remote add jellyx https://github.com/guns/jellyx.vim.git
+post_checkout_append = vcsh vim remote add dispatch https://github.com/tpope/vim-dispatch.git
+post_checkout_append = vcsh vim remote add unstack https://github.com/mattboehm/vim-unstack.git
