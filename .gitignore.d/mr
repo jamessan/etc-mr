@@ -2,7 +2,7 @@
 !/.config
 !/.config/mr
 !/.config/mr/available.d
-!/.config/mr/available.d/devscripts.vcsh
+!/.config/mr/available.d/debian.vcsh
 !/.config/mr/available.d/emacs.vcsh
 !/.config/mr/available.d/git.vcsh
 !/.config/mr/available.d/hg.vcsh
