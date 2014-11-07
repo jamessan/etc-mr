@@ -1,2 +1,0 @@
-[$HOME/.config/vcsh/repo.d/devscripts.git]
-checkout = vcsh clone http://git.jamessan.com/git/etc/devscripts.git devscripts
