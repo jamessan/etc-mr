@@ -11,15 +11,23 @@ checkout = svn co --depth=empty svn+ssh://svn.debian.org/svn/pkg-subversion/src 
 post_checkout = svn up --depth=infinity subversion/1.8.x
 post_checkout_append = svn up --depth=infinity subversion/wheezy
 
-[$HOME/src/debian.org/libvterm/experimental]
-pre_checkout = bzr init-repo . 2>/dev/null || true
-checkout = bzr branch bzr+ssh://bzr.debian.org/bzr/collab-maint/libvterm/experimental
-post_checkout = bzr config email="James McCoy <jamessan@debian.org>"
+[$HOME/src/debian.org/serf]
+checkout = git clone ssh://git.debian.org/git/collab-maint/serf.git
+post_checkout = cd serf && git config user.email jamessan@debian.org
 
-[$HOME/src/debian.org/pangoterm/experimental]
-pre_checkout = bzr init-repo . 2>/dev/null || true
-checkout = bzr branch bzr+ssh://bzr.debian.org/bzr/collab-maint/pangoterm/experimental
-post_checkout = bzr config email="James McCoy <jamessan@debian.org>"
+[$HOME/src/debian.org/smlnj]
+checkout = git clone ssh://git.debian.org/git/collab-maint/smlnj.git
+post_checkout = cd smlnj && git config user.email jamessan@debian.org
+
+[$HOME/src/debian.org/libvterm]
+checkout = git clone ssh://git.debian.org/git/collab-maint/libvterm.git
+post_checkout = cd libvterm && git config user.email jamessan@debian.org
+post_checkout_append = cd libvterm && git remote add upstream bzr::lp:libvterm
+
+[$HOME/src/debian.org/pangoterm]
+checkout = git clone ssh://git.debian.org/git/collab-maint/pangoterm.git
+post_checkout = cd pangoterm && git config user.email jamessan@debian.org
+post_checkout_append = cd pangoterm && git remote add upstream bzr::lp:pangoterm
 
 [$HOME/src/debian.org/vim-addon-manager]
 checkout = git clone ssh://git.debian.org/git/pkg-vim/vim-addon-manager.git
