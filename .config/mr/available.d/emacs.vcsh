@@ -1,3 +1,3 @@
 [$HOME/.config/vcsh/repo.d/emacs.git]
-checkout = vcsh clone http://git.jamessan.com/cgit/etc/emacs.git emacs
+checkout = vcsh clone https://git.jamessan.com/cgit/etc/emacs.git emacs
 post_checkout = vcsh emacs git remote add dtrt-indent https://github.com/jscheid/dtrt-indent.git

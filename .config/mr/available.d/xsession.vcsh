@@ -1,2 +1,2 @@
 [$HOME/.config/vcsh/repo.d/xsession.git]
-checkout = vcsh clone http://git.jamessan.com/cgit/etc/xsession.git xsession
+checkout = vcsh clone https://git.jamessan.com/cgit/etc/xsession.git xsession

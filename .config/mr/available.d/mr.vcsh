@@ -1,2 +1,2 @@
 [$HOME/.config/vcsh/repo.d/mr.git]
-checkout = vcsh clone http://git.jamessan.com/cgit/etc/mr.git mr
+checkout = vcsh clone https://git.jamessan.com/cgit/etc/mr.git mr

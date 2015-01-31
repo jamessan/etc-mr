@@ -1,2 +1,2 @@
 [$HOME/.config/vcsh/repo.d/debian.git]
-checkout = vcsh clone http://git.jamessan.com/cgit/etc/debian.git debian
+checkout = vcsh clone https://git.jamessan.com/cgit/etc/debian.git debian

@@ -1,5 +1,5 @@
 [$HOME/.config/vcsh/repo.d/vim.git]
-checkout = vcsh clone http://git.jamessan.com/cgit/etc/vim.git vim
+checkout = vcsh clone https://git.jamessan.com/cgit/etc/vim.git vim
 post_checkout = mkdir -p $HOME/.vim/tmp $HOME/.vim/backup
 post_checkout_append = vcsh vim remote add nerdtree https://github.com/scrooloose/nerdtree.git
 post_checkout_append = vcsh vim remote add repeat https://github.com/tpope/vim-repeat.git
