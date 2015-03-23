@@ -1,10 +1,9 @@
 [$HOME/src/debian.org/devscripts]
-checkout = git clone ssh://git.debian.org/git/collab-maint/devscripts.git
-post_checkout = cd devscripts && git config user.email jamessan@debian.org
+checkout = debcheckout -a devscripts
 
 [$HOME/src/debian.org/vim]
-checkout = hg clone ssh://hg.debian.org//hg/pkg-vim/vim
-post_checkout = printf "upstream = https://vim.googlecode.com/hg\n\n[ui]\nusername = James McCoy <jamessan@debian.org>\n" >> vim/.hg/hgrc
+checkout = debcheckout -a vim
+post_checkout = printf "[paths]\nupstream = https://vim.googlecode.com/hg\n" >> vim/.hg/hgrc
 
 [$HOME/src/debian.org/subversion]
 checkout = svn co --depth=empty svn+ssh://svn.debian.org/svn/pkg-subversion/src subversion
@@ -12,27 +11,24 @@ post_checkout = svn up --depth=infinity subversion/1.8.x
 post_checkout_append = svn up --depth=infinity subversion/wheezy
 
 [$HOME/src/debian.org/serf]
-checkout = git clone ssh://git.debian.org/git/collab-maint/serf.git
-post_checkout = cd serf && git config user.email jamessan@debian.org
+checkout = debcheckout -a serf
 
 [$HOME/src/debian.org/smlnj]
-checkout = git clone ssh://git.debian.org/git/collab-maint/smlnj.git
-post_checkout = cd smlnj && git config user.email jamessan@debian.org
+checkout = debcheckout -a smlnj
 
 [$HOME/src/debian.org/libvterm]
-checkout = git clone ssh://git.debian.org/git/collab-maint/libvterm.git
-post_checkout = cd libvterm && git config user.email jamessan@debian.org
-post_checkout_append = cd libvterm && git remote add upstream bzr::lp:libvterm
+checkout = debcheckout -a libvterm
+post_checkout = cd libvterm && git remote add upstream bzr::lp:libvterm
 
 [$HOME/src/debian.org/pangoterm]
-checkout = git clone ssh://git.debian.org/git/collab-maint/pangoterm.git
-post_checkout = cd pangoterm && git config user.email jamessan@debian.org
-post_checkout_append = cd pangoterm && git remote add upstream bzr::lp:pangoterm
+checkout = debcheckout -a pangoterm
+post_checkout = cd pangoterm && git remote add upstream bzr::lp:pangoterm
 
 [$HOME/src/debian.org/vim-addon-manager]
-checkout = git clone ssh://git.debian.org/git/pkg-vim/vim-addon-manager.git
-post_checkout = cd devscripts && git config user.email jamessan@debian.org
+checkout = debcheckout -a vim-addon-manager
 
 [$HOME/src/debian.org/vim-scripts]
-checkout = git clone ssh://git.debian.org/git/pkg-vim/vim-scripts.git
-post_checkout = cd devscripts && git config user.email jamessan@debian.org
+checkout = debcheckout -a vim-scripts
+
+[$HOME/src/debian.org/dex]
+checkout = debcheckout -a dex
