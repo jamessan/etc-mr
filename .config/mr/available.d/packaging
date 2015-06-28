@@ -18,6 +18,11 @@ post_checkout_append = svn up --depth=infinity subversion/wheezy
 [$HOME/src/debian.org/libvterm]
 post_checkout = cd libvterm && git remote add upstream bzr::lp:libvterm
 
+[$HOME/src/debian.org/libtermkey]
+post_checkout = cd libtermkey && git remote add upstream bzr::http://bazaar.leonerd.org.uk/c/libtermkey/
+
+[$HOME/src/debian.org/unibilium]
+
 [$HOME/src/debian.org/pangoterm]
 post_checkout = cd pangoterm && git remote add upstream bzr::lp:pangoterm
 
