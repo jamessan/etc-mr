@@ -1,7 +1,7 @@
 [$HOME/src/debian.org/devscripts]
 checkout = debcheckout -a devscripts
 
-[$HOME/src/debian.org/vim]
+[$HOME/src/debian.org/pkg-vim/vim]
 checkout = debcheckout -a vim
 post_checkout = printf "[paths]\nupstream = https://vim.googlecode.com/hg\n" >> vim/.hg/hgrc
 
@@ -24,10 +24,10 @@ post_checkout = cd libvterm && git remote add upstream bzr::lp:libvterm
 checkout = debcheckout -a pangoterm
 post_checkout = cd pangoterm && git remote add upstream bzr::lp:pangoterm
 
-[$HOME/src/debian.org/vim-addon-manager]
+[$HOME/src/debian.org/pkg-vim/vim-addon-manager]
 checkout = debcheckout -a vim-addon-manager
 
-[$HOME/src/debian.org/vim-scripts]
+[$HOME/src/debian.org/pkg-vim/vim-scripts]
 checkout = debcheckout -a vim-scripts
 
 [$HOME/src/debian.org/dex]
