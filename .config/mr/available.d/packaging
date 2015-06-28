@@ -32,3 +32,10 @@ checkout = debcheckout -a vim-scripts
 
 [$HOME/src/debian.org/dex]
 checkout = debcheckout -a dex
+
+[$HOME/src/debian.org/github-backup]
+checkout = debcheckout github-backup
+post_checkout = cd github-backup && git config user.email jamessan@debian.org
+
+[$HOME/src/debian.org/pkg-haskell/tools]
+checkout = debcheckout -a git://anonscm.debian.org/pkg-haskell/tools
