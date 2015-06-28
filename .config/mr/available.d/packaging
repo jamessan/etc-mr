@@ -1,8 +1,9 @@
+[DEFAULT]
+checkout = debcheckout -a ${MR_REPO##*/}
+
 [$HOME/src/debian.org/devscripts]
-checkout = debcheckout -a devscripts
 
 [$HOME/src/debian.org/pkg-vim/vim]
-checkout = debcheckout -a vim
 post_checkout = printf "[paths]\nupstream = https://vim.googlecode.com/hg\n" >> vim/.hg/hgrc
 
 [$HOME/src/debian.org/subversion]
@@ -11,27 +12,20 @@ post_checkout = svn up --depth=infinity subversion/1.8.x
 post_checkout_append = svn up --depth=infinity subversion/wheezy
 
 [$HOME/src/debian.org/serf]
-checkout = debcheckout -a serf
 
 [$HOME/src/debian.org/smlnj]
-checkout = debcheckout -a smlnj
 
 [$HOME/src/debian.org/libvterm]
-checkout = debcheckout -a libvterm
 post_checkout = cd libvterm && git remote add upstream bzr::lp:libvterm
 
 [$HOME/src/debian.org/pangoterm]
-checkout = debcheckout -a pangoterm
 post_checkout = cd pangoterm && git remote add upstream bzr::lp:pangoterm
 
 [$HOME/src/debian.org/pkg-vim/vim-addon-manager]
-checkout = debcheckout -a vim-addon-manager
 
 [$HOME/src/debian.org/pkg-vim/vim-scripts]
-checkout = debcheckout -a vim-scripts
 
 [$HOME/src/debian.org/dex]
-checkout = debcheckout -a dex
 
 [$HOME/src/debian.org/github-backup]
 checkout = debcheckout github-backup
