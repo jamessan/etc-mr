@@ -4,16 +4,15 @@ checkout = debcheckout -a ${MR_REPO##*/}
 [$HOME/src/debian.org/devscripts]
 
 [$HOME/src/debian.org/pkg-vim/vim]
-post_checkout = printf "[paths]\nupstream = https://vim.googlecode.com/hg\n" >> vim/.hg/hgrc
+post_checkout = cd vim && git remote add upstream https://github.com/vim/vim
 
 [$HOME/src/debian.org/subversion]
 checkout = svn co --depth=empty svn+ssh://svn.debian.org/svn/pkg-subversion/src subversion
 post_checkout = svn up --depth=infinity subversion/1.8.x
-post_checkout_append = svn up --depth=infinity subversion/wheezy
+post_checkout_append = svn up --depth=infinity subversion/1.9.x
+post_checkout_append = svn up --depth=infinity subversion/jessie
 
 [$HOME/src/debian.org/serf]
-
-[$HOME/src/debian.org/smlnj]
 
 [$HOME/src/debian.org/libvterm]
 post_checkout = cd libvterm && git remote add upstream bzr::lp:libvterm
@@ -30,11 +29,20 @@ post_checkout = cd pangoterm && git remote add upstream bzr::lp:pangoterm
 
 [$HOME/src/debian.org/pkg-vim/vim-scripts]
 
+[$HOME/src/debian.org/pkg-vim/libmpack]
+
+[$HOME/src/debian.org/pkg-vim/neovim]
+
+[$HOME/src/debian.org/pkg-vim/neovim-qt]
+
 [$HOME/src/debian.org/dex]
 
 [$HOME/src/debian.org/github-backup]
 checkout = debcheckout github-backup
 post_checkout = cd github-backup && git config user.email jamessan@debian.org
 
-[$HOME/src/debian.org/pkg-haskell/tools]
-checkout = debcheckout -a git://anonscm.debian.org/pkg-haskell/tools
+[$HOME/src/debian.org/pkg-haskell/package-plan]
+checkout = debcheckout -a git+ssh://git.debian.org/git/pkg-haskell/package-plan.git
+
+[$HOME/src/debian.org/pkg-haskell/DHG_packages]
+checkout = debcheckout -a git+ssh://git.debian.org/git/pkg-haskell/DHG_packages.git
