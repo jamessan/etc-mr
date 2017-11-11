@@ -16,6 +16,8 @@ post_checkout = cd pangoterm && git remote add upstream bzr::lp:pangoterm
 
 [$HOME/src/debian.org/pkg-vim/libmpack]
 
+[$HOME/src/debian.org/pkg-vim/libmpack-lua]
+
 [$HOME/src/debian.org/pkg-vim/neovim]
 
 [$HOME/src/debian.org/pkg-vim/neovim-qt]
