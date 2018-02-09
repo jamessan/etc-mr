@@ -8,6 +8,9 @@ checkout = debcheckout -a ${MR_REPO##*/}
 [$HOME/src/debian.org/libvterm]
 post_checkout = cd libvterm && git remote add upstream bzr::lp:libvterm
 
+[$HOME/src/debian.org/libtickit]
+post_checkout = cd libtickit && git remote add upstream bzr::lp:libtickit
+
 [$HOME/src/debian.org/libtermkey]
 post_checkout = cd libtermkey && git remote add upstream bzr::http://bazaar.leonerd.org.uk/c/libtermkey/
 
@@ -18,12 +21,13 @@ post_checkout = cd pangoterm && git remote add upstream bzr::lp:pangoterm
 
 [$HOME/src/debian.org/pkg-vim/libmpack-lua]
 
+[$HOME/src/debian.org/pkg-vim/msgpack-c]
+
 [$HOME/src/debian.org/pkg-vim/neovim]
 
 [$HOME/src/debian.org/pkg-vim/neovim-qt]
 
 [$HOME/src/debian.org/pkg-vim/vim]
-post_checkout = cd vim && git remote add upstream https://github.com/vim/vim
 
 [$HOME/src/debian.org/pkg-vim/vim-addon-manager]
 
@@ -32,9 +36,5 @@ post_checkout = cd vim && git remote add upstream https://github.com/vim/vim
 [$HOME/src/debian.org/serf]
 
 [$HOME/src/debian.org/subversion]
-checkout = svn co --depth=empty svn+ssh://svn.debian.org/svn/pkg-subversion/src subversion
-post_checkout = svn up --depth=infinity subversion/1.8.x
-post_checkout_append = svn up --depth=infinity subversion/1.9.x
-post_checkout_append = svn up --depth=infinity subversion/jessie
 
 [$HOME/src/debian.org/unibilium]
