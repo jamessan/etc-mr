@@ -9,9 +9,9 @@
 !/.config/mr/available.d/i3.vcsh
 !/.config/mr/available.d/mr.vcsh
 !/.config/mr/available.d/mutt.vcsh
-!/.config/mr/available.d/offlineimap.vcsh
 !/.config/mr/available.d/packaging
 !/.config/mr/available.d/ssh.vcsh
+!/.config/mr/available.d/tmux.vcsh
 !/.config/mr/available.d/vim.vcsh
 !/.config/mr/available.d/xsession.vcsh
 !/.config/mr/available.d/zsh.vcsh

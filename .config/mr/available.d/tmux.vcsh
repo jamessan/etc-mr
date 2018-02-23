@@ -1,0 +1,2 @@
+[$HOME/.config/vcsh/repo.d/tmux.git]
+checkout = vcsh clone https://git.jamessan.com/cgit/etc/tmux.git tmux
