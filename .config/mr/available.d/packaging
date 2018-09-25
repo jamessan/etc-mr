@@ -12,18 +12,22 @@ post_checkout = cd kitty && ghremote kovidgoyal/kitty.git
 
 [$HOME/src/debian.org/libvterm]
 post_checkout = cd libvterm && git remote add upstream bzr::lp:libvterm
+skip = ! command -v git-remote-bzr
 
 [$HOME/src/debian.org/libtickit]
 post_checkout = cd libtickit && git remote add upstream bzr::lp:libtickit
+skip = ! command -v git-remote-bzr
 
 [$HOME/src/debian.org/libtermkey]
 post_checkout = cd libtermkey && git remote add upstream bzr::http://bazaar.leonerd.org.uk/c/libtermkey/
+skip = ! command -v git-remote-bzr
 
 [$HOME/src/debian.org/msgpack-c]
 post_checkout = cd kitty && ghremote msgpack/msgpack-c.git
 
 [$HOME/src/debian.org/pangoterm]
 post_checkout = cd pangoterm && git remote add upstream bzr::lp:pangoterm
+skip = ! command -v git-remote-bzr
 
 [$HOME/src/debian.org/pkg-vim/libmpack]
 post_checkout = cd libmpack && ghremote libmpack/libmpack.git
