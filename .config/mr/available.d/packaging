@@ -5,6 +5,8 @@ checkout = debcheckout -a ${MR_REPO##*/}
 
 [$HOME/src/debian.org/dex]
 
+[$HOME/src/debian.org/kitty]
+
 [$HOME/src/debian.org/libvterm]
 post_checkout = cd libvterm && git remote add upstream bzr::lp:libvterm
 
