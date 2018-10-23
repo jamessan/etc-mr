@@ -1,14 +1,14 @@
 [DEFAULT]
 checkout = debcheckout -a ${MR_REPO##*/}
-lib = ghremote(){ git remote add upstream https://github.com/$1 }
+lib = ghremote() { REPO=${MR_REPO##*/}; cd "$REPO" && git remote add upstream "https://github.com/$1/${REPO}.git"; }
 
 [$HOME/src/debian.org/devscripts]
 
 [$HOME/src/debian.org/dex]
-post_checkout = cd dex && ghremote jceb/dex.git
+post_checkout = ghremote jceb
 
 [$HOME/src/debian.org/kitty]
-post_checkout = cd kitty && ghremote kovidgoyal/kitty.git
+post_checkout = ghremote kovidgoyal
 
 [$HOME/src/debian.org/libvterm]
 post_checkout = cd libvterm && git remote add upstream bzr::lp:libvterm
@@ -23,26 +23,26 @@ post_checkout = cd libtermkey && git remote add upstream bzr::http://bazaar.leon
 skip = ! command -v git-remote-bzr
 
 [$HOME/src/debian.org/msgpack-c]
-post_checkout = cd kitty && ghremote msgpack/msgpack-c.git
+post_checkout = ghremote msgpack
 
 [$HOME/src/debian.org/pangoterm]
 post_checkout = cd pangoterm && git remote add upstream bzr::lp:pangoterm
 skip = ! command -v git-remote-bzr
 
 [$HOME/src/debian.org/pkg-vim/libmpack]
-post_checkout = cd libmpack && ghremote libmpack/libmpack.git
+post_checkout = ghremote libmpack
 
 [$HOME/src/debian.org/pkg-vim/libmpack-lua]
-post_checkout = cd libmpack-lua && ghremote libmpack/libmpack-lua.git
+post_checkout = ghremote libmpack
 
 [$HOME/src/debian.org/pkg-vim/neovim]
-post_checkout = cd neovim && ghremote neovim/neovim.git
+post_checkout = ghremote neovim
 
 [$HOME/src/debian.org/pkg-vim/neovim-qt]
-post_checkout = cd neovim-qt && ghremote equalsraf/neovim-qt.git
+post_checkout = ghremote equalsraf
 
 [$HOME/src/debian.org/pkg-vim/vim]
-post_checkout = cd vim && ghremote vim/vim.git
+post_checkout = ghremote vim
 
 [$HOME/src/debian.org/pkg-vim/vim-addon-manager]
 
@@ -53,4 +53,4 @@ post_checkout = cd vim && ghremote vim/vim.git
 [$HOME/src/debian.org/subversion]
 
 [$HOME/src/debian.org/unibilium]
-post_checkout = cd unibilium && ghremote mauke/unibilium.git
+post_checkout = ghremote mauke
