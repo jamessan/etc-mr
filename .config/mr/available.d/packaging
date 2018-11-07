@@ -44,6 +44,9 @@ post_checkout = ghremote equalsraf
 [$HOME/src/debian.org/pkg-vim/vim]
 post_checkout = ghremote vim
 
+[$HOME/src/debian.org/pkg-vim/vim-debian]
+checkout = git clone salsa:vim-team/vim-debian
+
 [$HOME/src/debian.org/pkg-vim/vim-addon-manager]
 
 [$HOME/src/debian.org/pkg-vim/vim-scripts]
